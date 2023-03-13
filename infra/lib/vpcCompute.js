@@ -111,8 +111,8 @@ const userDataScript = `#!/bin/bash
   echo "Hello, World!" > index.html
   nohup python -m SimpleHTTPServer 80 &`;
 
-const instance = new aws.ec2.Instance("web-server-www", {
-  tags: { Name: "web-server-www", aws_nuke: "yes" },
+const instance = new aws.ec2.Instance("Jake-Ec2-Instance", {
+  tags: { Name: "Jake-Ec2-Instance", aws_nuke: "yes" },
   instanceType: instanceSize,
   subnetId: subnet.id,
   vpcSecurityGroupIds: [securityGroup.id], // reference the group object above
